@@ -1,19 +1,12 @@
 const express = require('express');
+const morgan = require('morgan');
 const app = express();
 
-app.use((req, res, next) => {
-  console.log(req.method, req.url, res.statusCode);
-  next();
-})
+app.use(morgan('dev'));
 
 app.get('/', (req, res, next) => {
   res.send('Hello, world!');
-})
-
-app.use('/news', (req, res, next) => {
-  console.log('This is /news');
-  next();
-})
+});
 
 app.get('/news', (req, res, next) => {
   res.send('Welcome to /news!');
