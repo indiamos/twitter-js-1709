@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "India Amos <india@indiamos.com> (https://github.com/indiamos)",
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "morgan": "^1.8.2"
   }
 }
